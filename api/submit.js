@@ -1,0 +1,25 @@
+﻿export default function handler(req, res) {
+    if (req.method !== "POST") {
+        return res.status(405).json({ error: "Method Not Allowed" });
+    }
+
+    const { age, gender, lookingFor } = req.body;
+
+    if (!age || !gender || !lookingFor) {
+        return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    const submission = {
+        age,
+        gender,
+        lookingFor,
+        timestamp: new Date().toISOString(),
+    };
+
+    console.log("New Submission:", submission);
+
+    // Later, this is where you'd store data in a database
+    // For now, we're just logging to console
+
+    res.status(200).json({ success: true, message: "Submission stored" });
+}

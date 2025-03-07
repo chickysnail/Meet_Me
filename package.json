@@ -1,0 +1,15 @@
+﻿{
+  "name": "meet-me",
+  "version": "1.0.0",
+  "description": "Personal dating landing page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "author": "Artem",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
